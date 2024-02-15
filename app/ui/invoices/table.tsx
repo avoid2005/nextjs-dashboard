@@ -18,6 +18,7 @@ export default async function InvoicesTable({
       <div className="inline-block min-w-full align-middle">
         <div className="rounded-lg bg-gray-50 p-2 md:pt-0">
           <div className="md:hidden">
+            {invoices.length === 0 && <div className="text-2xl text-slate-500 font-bold text-center my-5">No Invoices</div>}
             {invoices?.map((invoice) => (
               <div
                 key={invoice.id}
